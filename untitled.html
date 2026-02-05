@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PriceCompare – Smart Shopping</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #000;
+}
+
+header {
+    background: linear-gradient(90deg, #000, #c40000);
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: #ffd700;
+    margin: 0;
+}
+
+header p {
+    color: #fff;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.search-bar input {
+    width: 60%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ffd700;
+}
+
+.search-bar button {
+    padding: 12px 20px;
+    background: #c40000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.platforms {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: #f9f9f9;
+    border: 2px solid #c40000;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+}
+
+.card img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    color: #c40000;
+}
+
+footer {
+    background: #000;
+    color: #ffd700;
+    text-align: center;
+    padding: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>PriceCompare</h1>
+    <p>Compare prices across online platforms</p>
+</header>
+
+<div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search product..." onkeyup="searchProduct()">
+    <button onclick="searchProduct()">Search</button>
+</div>
+
+<section class="platforms">
+
+<div class="card">
+<img src="images/iphone.jpg" alt="iPhone 14">
+<h3>iPhone 14</h3>
+<p>⭐⭐⭐⭐⭐</p>
+<p>Amazon: ₹69,999</p>
+<p>Flipkart: ₹68,499</p>
+<p>Reliance: ₹69,200</p>
+</div>
+
+<div class="card">
+<img src="images/samsung.jpg" alt="Samsung Galaxy S23">
+<h3>Samsung Galaxy S23</h3>
+<p>⭐⭐⭐⭐☆</p>
+<p>Amazon: ₹74,999</p>
+<p>Flipkart: ₹73,499</p>
+<p>Reliance: ₹74,200</p>
+</div>
+
+<div class="card">
+<img src="images/oneplus.jpg" alt="OnePlus 11">
+<h3>OnePlus 11</h3>
+<p>⭐⭐⭐⭐☆</p>
+<p>Amazon: ₹61,999</p>
+<p>Flipkart: ₹60,499</p>
+<p>Reliance: ₹61,200</p>
+</div>
+
+<div class="card">
+<img src="images/redmi.jpg" alt="Redmi Note 12">
+<h3>Redmi Note 12</h3>
+<p>⭐⭐⭐⭐☆</p>
+<p>Amazon: ₹14,999</p>
+<p>Flipkart: ₹13,999</p>
+<p>Reliance: ₹14,499</p>
+</div>
+
+<div class="card">
+<img src="images/realme.jpg" alt="Realme Narzo">
+<h3>Realme Narzo</h3>
+<p>⭐⭐⭐⭐☆</p>
+<p>Amazon: ₹12,499</p>
+<p>Flipkart: ₹11,999</p>
+<p>Reliance: ₹12,199</p>
+</div>
+
+<div class="card">
+<img src="images/dell.jpg" alt="Dell Inspiron">
+<h3>Dell Inspiron</h3>
+<p>⭐⭐⭐⭐☆</p>
+<p>Amazon: ₹54,999</p>
+<p>Flipkart: ₹53,499</p>
+<p>Reliance: ₹54,200</p>
+</div>
+
+<div class="card">
+<img src="images/hp.jpg" alt="HP Pavilion">
+<h3>HP Pavilion</h3>
+<p>⭐⭐⭐⭐☆</p>
+<p>Amazon: ₹59,999</p>
+<p>Flipkart: ₹58,499</p>
+<p>Reliance: ₹59,200</p>
+</div>
+
+<div class="card">
+<img src="images/lenovo.jpg" alt="Lenovo IdeaPad">
+<h3>Lenovo IdeaPad</h3>
+<p>⭐⭐⭐⭐☆</p>
+<p>Amazon: ₹47,999</p>
+<p>Flipkart: ₹46,999</p>
+<p>Reliance: ₹47,500</p>
+</div>
+
+<div class="card">
+<img src="images/macbook.jpg" alt="MacBook Air M1">
+<h3>MacBook Air M1</h3>
+<p>⭐⭐⭐⭐⭐</p>
+<p>Amazon: ₹82,999</p>
+<p>Flipkart: ₹81,499</p>
+<p>Reliance: ₹82,200</p>
+</div>
+
+<div class="card">
+<img src="images/asus.jpg" alt="Asus VivoBook">
+<h3>Asus VivoBook</h3>
+<p>⭐⭐⭐⭐☆</p>
+<p>Amazon: ₹49,999</p>
+<p>Flipkart: ₹48,499</p>
+<p>Reliance: ₹49,200</p>
+</div>
+
+<div class="card">
+<img src="images/samsungtv.jpg" alt="Samsung Smart TV">
+<h3>Samsung Smart TV</h3>
+<p>⭐⭐⭐⭐☆</p>
+<p>Amazon: ₹38,999</p>
+<p>Flipkart: ₹37,499</p>
+<p>Reliance: ₹38,200</p>
+</div>
+
+<div class="card">
+<img src="images/lg.jpg" alt="LG LED TV">
+<h3>LG LED TV</h3>
+<p>⭐⭐⭐⭐☆</p>
+<p>Amazon: ₹42,999</p>
+<p>Flipkart: ₹41,999</p>
+<p>Reliance: ₹42,200</p>
+</div>
+
+<div class="card">
+<img src="images/sony.jpg" alt="Sony Bravia">
+<h3>Sony Bravia</h3>
+<p>⭐⭐⭐⭐⭐</p>
+<p>Amazon: ₹64,999</p>
+<p>Flipkart: ₹63,499</p>
+<p>Reliance: ₹64,200</p>
+</div>
+
+<div class="card">
+<img src="images/boat.jpg" alt="Boat Headphones">
+<h3>Boat Headphones</h3>
+<p>⭐⭐⭐⭐☆</p>
+<p>Amazon: ₹1,299</p>
+<p>Flipkart: ₹1,199</p>
+<p>Reliance: ₹1,249</p>
+</div>
+
+<div class="card">
+<img src="images/airpods.jpg" alt="Apple AirPods">
+<h3>Apple AirPods</h3>
+<p>⭐⭐⭐⭐⭐</p>
+<p>Amazon: ₹19,999</p>
+<p>Flipkart: ₹18,999</p>
+<p>Reliance: ₹19,499</p>
+</div>
+
+</section>
+
+<footer>
+<p>©️ 2026 PriceCompare | Smart Shopping Made Easy</p>
+</footer>
+
+<script>
+function searchProduct() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let cards = document.getElementsByClassName("card");
+
+    for (let i = 0; i < cards.length; i++) {
+        let title = cards[i].getElementsByTagName("h3")[0].innerText.toLowerCase();
+        cards[i].style.display = title.includes(input) ? "block" : "none";
+    }
+}
+</script>
+
+</body>
+</html>
